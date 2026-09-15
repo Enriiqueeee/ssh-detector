@@ -1,3 +1,16 @@
-2026-09-11T19:15:25.368765+00:00 ubuntu sshd-session[2301]: Failed password for enrique from 192.168.26.1 port 65113 ssh2 
-2026-09-11T19:22:17.348243+00:00 ubuntu sudo: enrique : TTY=/dev/pts/0 ; PWD=/home/enrique ; USER=root ; COMMAND=/usr/bin/grep \u{a8}Failed password\u{a8} /var/log/auth.log 
-2026-09-11T19:22:24.902346+00:00 ubuntu sudo: enrique : TTY=/dev/pts/0 ; PWD=/home/enrique ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log 2026-09-11T19:22:27.877831+00:00 ubuntu sudo: enrique : TTY=/dev/pts/0 ; PWD=/home/enrique ; USER=root ; COMMAND=/usr/bin/grep Failed password /var/log/auth.log
+2026-09-15T00:10:12.123456+00:00 ubuntu sshd-session[3001]: Failed password for enrique from 192.168.26.1 port 51001 ssh2
+2026-09-15T00:10:15.234567+00:00 ubuntu sshd-session[3002]: Failed password for enrique from 192.168.26.1 port 51002 ssh2
+2026-09-15T00:10:18.345678+00:00 ubuntu sshd-session[3003]: Failed password for enrique from 192.168.26.1 port 51003 ssh2
+2026-09-15T00:10:21.456789+00:00 ubuntu sshd-session[3004]: Failed password for enrique from 192.168.26.1 port 51004 ssh2
+
+2026-09-15T00:11:02.123456+00:00 ubuntu sshd-session[3010]: Failed password for admin from 192.168.26.50 port 52001 ssh2
+2026-09-15T00:11:05.234567+00:00 ubuntu sshd-session[3011]: Failed password for admin from 192.168.26.50 port 52002 ssh2
+
+2026-09-15T00:12:10.123456+00:00 ubuntu sshd-session[3020]: Failed password for root from 10.10.10.15 port 53001 ssh2
+2026-09-15T00:12:13.234567+00:00 ubuntu sshd-session[3021]: Failed password for root from 10.10.10.15 port 53002 ssh2
+2026-09-15T00:12:16.345678+00:00 ubuntu sshd-session[3022]: Failed password for root from 10.10.10.15 port 53003 ssh2
+2026-09-15T00:12:19.456789+00:00 ubuntu sshd-session[3023]: Failed password for root from 10.10.10.15 port 53004 ssh2
+2026-09-15T00:12:22.567890+00:00 ubuntu sshd-session[3024]: Failed password for root from 10.10.10.15 port 53005 ssh2
+2026-09-15T00:12:25.678901+00:00 ubuntu sshd-session[3025]: Failed password for root from 10.10.10.15 port 53006 ssh2
+
+2026-09-15T00:13:01.123456+00:00 ubuntu sshd-session[3030]: Failed password for test from 172.16.0.25 port 54001 ssh2
