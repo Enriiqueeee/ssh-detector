@@ -12,10 +12,24 @@ def leer_log():
     return linea
     
 
-def detectar_fuerza_bruta():
-    
+def analizar_log(linea):
+    linea = leer_log()
 
-return 
+    for failed in linea:
+        if "Failed passowrd" in failed and "sshd-session" in failed:
+            partes = failed.split()
+            
+            ip = partes[8]
+
+            usuario = partes[6]
+
+            print(failed)
+            print("IP atacante:", ip)
+            print("Usuario atacado:", usuario)
+            print("-" * 30)
+
+    return failed
+
 
 
 linea = leer_log()
