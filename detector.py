@@ -56,9 +56,16 @@ def analizar_log(linea):
 
     for failed in linea:
 
-        if "Failed password" in failed and "sshd-session" in failed:
+        partes = failed.split()
 
-            partes = failed.split()
+        if (
+            len(partes) >= 9
+            and partes[2].startswith("sshd-session[")
+            and partes[3] == "Failed"
+            and partes[4] == "password"
+            and partes[5] == "for"
+            and partes[7] == "from"
+        ):
 
             ip = partes[8]
             usuario = partes[6]
@@ -100,43 +107,57 @@ def detectar_fuerza_bruta(registro_ataque, registro_ataque_ip):
 
         intentos = datos["intentos"]
         fechas = datos["fechas"]
-        primera_fecha = fechas[0]
-        ultima_fecha = fechas[-1]
 
-        duracion = ultima_fecha - primera_fecha
+        if intentos >= UMBRAL_USUARIO:
 
-        if intentos >= UMBRAL_USUARIO and duracion.total_seconds() <= VENTANA_TIEMPO:
+            for i in range(UMBRAL_USUARIO - 1, len(fechas)):
 
-            alerta = {
-                "tipo": "usuario",
-                "ip": ip,
-                "usuario": usuario,
-                "intentos": intentos,
-                "primer_intento": primera_fecha,
-                "ultimo_intento": ultima_fecha
-            }
+                inicio = fechas[i - UMBRAL_USUARIO + 1]
+                fin = fechas[i]
 
-            alertas.append(alerta)
+                duracion = fin - inicio
+
+                if duracion.total_seconds() <= VENTANA_TIEMPO:
+
+                    alerta = {
+                        "tipo": "usuario",
+                        "ip": ip,
+                        "usuario": usuario,
+                        "intentos": UMBRAL_USUARIO,
+                        "primer_intento": inicio,
+                        "ultimo_intento": fin
+                    }
+
+                    alertas.append(alerta)
+                    break
 
     # Comprobar IP total
     for ip, datos_ip in registro_ataque_ip.items():
+
         intentos = datos_ip["intentos"]
         fechas = datos_ip["fechas"]
-        primera_fecha = fechas[0]
-        ultima_fecha = fechas[-1]
 
-        duracion = ultima_fecha - primera_fecha
+        if intentos >= UMBRAL_IP:
 
-        if intentos >= UMBRAL_IP and duracion.total_seconds() <= VENTANA_TIEMPO:
-            alerta = {
-                "tipo": "IP",
-                "ip": ip,
-                "intentos": intentos,
-                "primer_intento": primera_fecha,
-                "ultimo_intento": ultima_fecha
-            }
+            for i in range(UMBRAL_IP - 1, len(fechas)):
 
-            alertas.append(alerta)
+                inicio = fechas[i - UMBRAL_IP + 1]
+                fin = fechas[i]
+
+                duracion = fin - inicio
+
+                if duracion.total_seconds() <= VENTANA_TIEMPO:
+
+                    alerta = {
+                        "tipo": "IP",
+                        "ip": ip,
+                        "intentos": UMBRAL_IP,
+                        "primer_intento": inicio,
+                        "ultimo_intento": fin
+                    }
+
+                    alertas.append(alerta)
+                    break
 
     return alertas
 
