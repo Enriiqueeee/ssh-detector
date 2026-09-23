@@ -2,15 +2,28 @@
 2026-09-15T00:10:15.234567+00:00 ubuntu sshd-session[3002]: Failed password for enrique from 192.168.26.1 port 51002 ssh2
 2026-09-15T00:10:18.345678+00:00 ubuntu sshd-session[3003]: Failed password for enrique from 192.168.26.1 port 51003 ssh2
 2026-09-15T00:10:21.456789+00:00 ubuntu sshd-session[3004]: Failed password for enrique from 192.168.26.1 port 51004 ssh2
-
 2026-09-15T00:11:02.123456+00:00 ubuntu sshd-session[3010]: Failed password for admin from 192.168.26.50 port 52001 ssh2
 2026-09-15T00:11:05.234567+00:00 ubuntu sshd-session[3011]: Failed password for admin from 192.168.26.50 port 52002 ssh2
-
 2026-09-15T00:12:10.123456+00:00 ubuntu sshd-session[3020]: Failed password for root from 10.10.10.15 port 53001 ssh2
 2026-09-15T00:12:13.234567+00:00 ubuntu sshd-session[3021]: Failed password for root from 10.10.10.15 port 53002 ssh2
 2026-09-15T00:12:16.345678+00:00 ubuntu sshd-session[3022]: Failed password for root from 10.10.10.15 port 53003 ssh2
 2026-09-15T00:12:19.456789+00:00 ubuntu sshd-session[3023]: Failed password for root from 10.10.10.15 port 53004 ssh2
 2026-09-15T00:12:22.567890+00:00 ubuntu sshd-session[3024]: Failed password for root from 10.10.10.15 port 53005 ssh2
 2026-09-15T00:12:25.678901+00:00 ubuntu sshd-session[3025]: Failed password for root from 10.10.10.15 port 53006 ssh2
-
 2026-09-15T00:13:01.123456+00:00 ubuntu sshd-session[3030]: Failed password for test from 172.16.0.25 port 54001 ssh2
+2026-09-15T01:00:00.000000+00:00 ubuntu sshd-session[4001]: Failed password for backup from 192.168.50.10 port 55001 ssh2
+2026-09-15T02:00:00.000000+00:00 ubuntu sshd-session[4002]: Failed password for backup from 192.168.50.10 port 55002 ssh2
+2026-09-15T03:00:00.000000+00:00 ubuntu sshd-session[4003]: Failed password for backup from 192.168.50.10 port 55003 ssh2
+2026-09-15T04:00:00.000000+00:00 ubuntu sshd-session[4004]: Failed password for backup from 192.168.50.10 port 55004 ssh2
+2026-09-15T05:00:00.000000+00:00 ubuntu sshd-session[4005]: Failed password for backup from 192.168.50.10 port 55005 ssh2
+2026-09-15T06:00:00.000000+00:00 ubuntu sshd-session[4006]: Failed password for backup from 192.168.50.10 port 55006 ssh2
+2026-09-15T10:00:00.000000+00:00 ubuntu sshd-session[5001]: Failed password for admin from 10.20.30.40 port 56001 ssh2
+2026-09-15T10:00:03.000000+00:00 ubuntu sshd-session[5002]: Failed password for root from 10.20.30.40 port 56002 ssh2
+2026-09-15T10:00:06.000000+00:00 ubuntu sshd-session[5003]: Failed password for postgres from 10.20.30.40 port 56003 ssh2
+2026-09-15T10:00:09.000000+00:00 ubuntu sshd-session[5004]: Failed password for test from 10.20.30.40 port 56004 ssh2
+2026-09-15T10:00:12.000000+00:00 ubuntu sshd-session[5005]: Failed password for backup from 10.20.30.40 port 56005 ssh2
+2026-09-15T10:00:15.000000+00:00 ubuntu sshd-session[5006]: Failed password for guest from 10.20.30.40 port 56006 ssh2
+2026-09-15T10:00:18.000000+00:00 ubuntu sshd-session[5007]: Failed password for ubuntu from 10.20.30.40 port 56007 ssh2
+2026-09-15T10:00:21.000000+00:00 ubuntu sshd-session[5008]: Failed password for deploy from 10.20.30.40 port 56008 ssh2
+2026-09-15T10:00:24.000000+00:00 ubuntu sshd-session[5009]: Failed password for user from 10.20.30.40 port 56009 ssh2
+2026-09-15T10:00:27.000000+00:00 ubuntu sshd-session[5010]: Failed password for operator from 10.20.30.40 port 56010 ssh2
