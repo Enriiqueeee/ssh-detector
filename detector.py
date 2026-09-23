@@ -1,10 +1,24 @@
 print ("SSH Brute Force Detector")
 
-log = open("auth.log", "r")
+# Leer el archivo de auth.log
+def leer_log():
+    log = open("auth.log", "r")
+    log_failed = log.read()
 
-log_failed = log.read()
+    linea = log_failed.splitlines()
 
-linea = log_failed.splitlines()
+    log.close()
+
+    return linea
+    
+
+def detectar_fuerza_bruta():
+    
+
+return 
+
+
+linea = leer_log()
 
 fallos_contador = 0
 
@@ -35,8 +49,8 @@ for failed in linea:
             registro_ataque_ip[ip] = 1
 
 
-        print(failed)
-        print("IP atacante:", ip)
+        #print(failed)
+        #print("IP atacante:", ip)
 
 print("\n" + "="*30)
 print(f"{'IP atacante':<18} {'Usuario':<12} {'Intentos'}")
@@ -52,14 +66,3 @@ for ip, intentos in registro_ataque_ip.items():
         print(f"Alerta: La IP {ip} ha realizado {intentos}. Posible ataque de fuerza bruta")
 
 print("-" * 30)
-
-
-def leer_log():
-    log = open("auth.log", "r")
-    log_failed = log.read()
-
-    linea = log_failed.splitlines()
-
-    fallos_contador = 0
-
-    
